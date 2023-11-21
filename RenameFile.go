@@ -13,6 +13,7 @@ func NewRenameFile(fileName string, oldIpaName string) *RenameFile {
 		fileName:   fileName,
 	}
 }
+
 func (m *RenameFile) Rename() error {
 	err := os.Rename(m.oldIpaName, m.fileName+".ipa")
 	if err != nil {

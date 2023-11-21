@@ -14,6 +14,7 @@ type PlistReplacer struct {
 func NewPlistReplacer(infoMap map[string]interface{}) *PlistReplacer {
 	return &PlistReplacer{infoMap: infoMap}
 }
+
 func (r *PlistReplacer) Replace(plistFilePath, appName string) error {
 	plistFile, err := os.Open(plistFilePath)
 	if err != nil {

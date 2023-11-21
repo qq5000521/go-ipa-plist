@@ -21,7 +21,7 @@ func GetIPAFilePath() (string, error) {
 	return ipaFile, nil
 }
 
-// FindIpaFile查找ipa文件
+// FindIpaFile 查找ipa文件
 func FindIpaFile(dir string) (string, error) {
 	var ipaFile string
 	err := filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
